@@ -1,0 +1,8 @@
+{
+  "files.associations": {
+    "eigen": "cpp",
+    "dense": "cpp",
+    "complex": "cpp",
+    "ostream": "cpp"
+  }
+}
