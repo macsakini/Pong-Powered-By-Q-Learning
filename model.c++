@@ -57,7 +57,7 @@ void runModel(int state_space, int action_space)
     // MatrixXd b2_n = l3.getBias() - 0.95 * db2;
 }
 
-int main()
-{
-    runModel(5, 3);
-}
+// int main()
+// {
+//     runModel(5, 3);
+// }

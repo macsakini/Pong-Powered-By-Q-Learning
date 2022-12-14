@@ -3,6 +3,8 @@
     "eigen": "cpp",
     "dense": "cpp",
     "complex": "cpp",
-    "ostream": "cpp"
+    "ostream": "cpp",
+    "list": "cpp",
+    "iostream": "cpp"
   }
 }
