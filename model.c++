@@ -9,7 +9,7 @@ using namespace std;
 using Eigen::exp;
 using Eigen::MatrixXd;
 
-void runModel(int state_space, int action_space)
+int runModel(int state_space, int action_space)
 
 {
     // Number and size
@@ -55,6 +55,7 @@ void runModel(int state_space, int action_space)
 
     // MatrixXd w2_n = l3.getWeights() - 0.95 * dw2;
     // MatrixXd b2_n = l3.getBias() - 0.95 * db2;
+    return 0;
 }
 
 // int main()
