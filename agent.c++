@@ -12,9 +12,8 @@ Agent::Agent(int state_space, int action_space)
 };
 
 // Allows agent to take action
-void Agent::act()
-{
-    runModel(state_space, action_space);
+void Agent::act(){
+    // runModel(state_space, action_space);
 };
 
 // Store Trajectory in Queue
