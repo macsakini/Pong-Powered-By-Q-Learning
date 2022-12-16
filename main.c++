@@ -29,7 +29,7 @@ void train_dqn()
 
         for (int j; j <= max_steps; j++)
         {
-            // int lb = 0, ub = 2;
+            // // int lb = 0, ub = 2;
             double ballposx = static_cast<double>(st.ballposx);
             double ballposy = static_cast<double>(st.ballposy);
             double xvel = static_cast<double>(st.xvel);
@@ -41,13 +41,15 @@ void train_dqn()
 
             MatrixXd action = model.forward(m);
 
-            // General gen = game.step(action.maxCoeff());
+            log(action);
 
-            // if (gen.done == 1)
-            // {
-            //     log("done");
-            //     break;
-            // }
+            game.step(1);
+
+            if (gen.done == 1)
+            {
+                log("done");
+                break;
+            }
         }
     }
 }

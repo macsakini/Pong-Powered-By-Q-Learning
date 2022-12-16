@@ -17,20 +17,19 @@ Model::Model(int state_space, int action_space)
 };
 
 MatrixXd Model::forward(MatrixXd x)
-
 {
     // Number and size
     MatrixXd data = x.transpose();
 
     // Hidden_DIM , DATA_SIZE
-    Linear l1 = Linear(512, state_space);
+    Linear l1 = Linear(10, 4);
     MatrixXd l1_out = l1.forward(data);
 
     // Your hidden dimension for previous layer is your data size for new layer
-    Linear l2 = Linear(72, 512);
+    Linear l2 = Linear(10, 10);
     MatrixXd l2_out = l2.forward(l1_out.cwiseMax(0));
 
-    Linear l3 = Linear(action_space, 72);
+    Linear l3 = Linear(action_space, 10);
     MatrixXd l3_out = l3.forward(l2_out.cwiseMax(0));
 
     return l3_out;
